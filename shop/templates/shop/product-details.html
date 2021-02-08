@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% block title %}Product Details{% endblock title %}
+{% block content %}
+{% load static %}
+<!-- =================== Product Details============ -->
+		<section class="shop_container product_details_container faqs_sec"> <!-- faqs_sec use for style left side content -->
+			<div class="container">
+				<div class="row">
+					<!-- .product-details-page-content -->
+					<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 pull-right shop-page-content product-details-page-content">
+						<div class="row product-details-box">
+							<div class="col-lg-6 img-holder">
+								<img src="{% static 'images/shop/product-details.png' %}" alt="">
+							</div>
+							<div class="col-lg-6" style="padding-left:23px;">
+								<h3>{{ product.name }}</h3>
+								<p>{{ product.description }}</p>
+								<span>Price : <b>${{ product.price }}</b></span>
+								<span>Quantity : <input type="text" value="1"> </span>
+								<a href="#" class="add-to-cart">Add to Cart<i class="fa fa-arrow-circle-right"></i></a>
+							</div>
+						</div>
+							<!-- product-details-tab -->
+						<div class="bottom_tab col-xs-12">
+							<ul class="nav nav-tabs">
+							  <li class="active"><a data-toggle="tab" href="#tab_1">Descripton</a></li>
+							  <li><a data-toggle="tab" href="#tab_2">Specification</a></li>
+							  <li><a data-toggle="tab" href="#tab_3">Review (0)</a></li>
+							</ul>
+							<div class="tab-content bottom_tab_info">
+							  <div id="tab_1" class="tab-pane fade in active">
+							    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br> <br>
+								xcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum </p>
+							  </div>
+							  <div id="tab_2" class="tab-pane fade">
+							    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br> <br>
+								xcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum </p>
+							  </div>
+							  <div id="tab_3" class="tab-pane fade">
+							    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br> <br>
+								xcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum </p>
+							  </div>
+							</div>
+						</div>
+							<!-- /product-details-tab -->
+						<div class="row best-seller">
+							<div class="section-title-style-2">
+								<h2>Best Seller</h2>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 single-shop-item">
+								<img class="img-responsive" src="{% static 'images/shop/7.jpg' %}" alt="">
+								<div class="meta">
+									<h4>Invest Bonds</h4>
+									<p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit,</p>
+									<span>Price: <b>$24.5</b></span>
+									<a href="cart-page.html">Add to Cart <i class="fa fa-shopping-cart"></i></a>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 single-shop-item">
+								<img class="img-responsive" src="{% static 'images/shop/8.jpg' %}" alt="">
+								<div class="meta">
+									<h4>Invest Bonds</h4>
+									<p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit,</p>
+									<span>Price: <b>$24.5</b></span>
+									<a href="cart-page.html">Add to Cart <i class="fa fa-shopping-cart"></i></a>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 single-shop-item">
+								<img class="img-responsive" src="{% static 'images/shop/9.jpg' %}" alt="">
+								<div class="meta">
+									<h4>Invest Bonds</h4>
+									<p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit,</p>
+									<span>Price: <b>$24.5</b></span>
+									<a href="cart-page.html">Add to Cart <i class="fa fa-shopping-cart"></i></a>
+								</div>
+							</div>
+						</div>
+					</div> <!-- /.product-details-page-content -->
+					{% include 'shop/side-bar.html' %}
+				</div>
+			</div>
+		</section>
+
+<!-- =================== Product Details============ -->
+{% endblock content %}

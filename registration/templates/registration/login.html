@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Log-in{% endblock %}
+{% block content %}
+<!-- =================== Contact us container ============== -->
+		<section class="contact_us_container">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align:center;"> <!-- section title -->
+						<h2>Log-in</h2>
+                        {% if form.errors %}
+                            <p>
+                                Your username and password didn't match.
+                                Please try again.
+                            </p>
+                        {% else %}
+                            <p>Please, use the following form to log-in:</p>
+                        {% endif %}
+                        <div class="login-form">
+                            <form action="{% url 'registration:login' %}" method="post">
+                                {{ form.as_p }}
+                                {% csrf_token %}
+                                <input type="hidden" name="next" value="{{ next }}"/>
+                                <p><input type="submit" value="Log-in"></p>
+                            </form>
+                        </div>
+					</div> <!-- End section title -->
+				</div>
+			</div>
+		</section>
+<!-- =================== /Contact us container ============== -->
+{% endblock %}

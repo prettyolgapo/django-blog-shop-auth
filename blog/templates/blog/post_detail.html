@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block title %}Post Detail{% endblock title %}
+{% block content %}
+{% load static %}
+<!-- ================== Blog Container ========== -->
+		<section class="blog-container two-side-background single-blog-page faqs_sec"> <!-- faqs_sec use for style right side content -->
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 white-left left-content ptb-80">
+						<!-- .single-blog-post -->
+						<div class="single-blog-post single-page-content anim-5-all">
+							<!-- .img-holder -->
+							<div class="img-holder">
+								<img src="{% static 'images/blog/14.jpg' %}" alt="">
+							</div><!-- /.img-holder -->
+							<div class="post-meta">
+								<div class="date-holder">
+									{% if post.published_date %}
+                                        <div class="date">
+                                            {{ post.published_date }}
+                                        </div>
+                                    {% endif %}
+								</div>
+                                {% if user.is_authenticated %}
+                                    <a class="btn btn-default" href="{% url 'blog:post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+                                {% endif %}
+								<div class="title-holder">
+									<h1>{{ post.title }}</h1>
+									<ul>
+										<li><a href="#">Posted By: John Smith</a></li>
+										<li><a href="#">Comments: 2</a></li>
+										<li><a href="#"> Categories: Taxes & Accounts</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="content">
+								<p>{{ post.text }}</p>
+
+							</div>
+						</div><!-- /.single-blog-post -->
+					</div>
+
+                    {% include 'blog/side-bar.html' %}
+				</div>
+			</div>
+		</section>
+<!-- ================== /Blog Container ========== -->
+{% endblock %}

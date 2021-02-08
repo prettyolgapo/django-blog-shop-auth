@@ -1,0 +1,51 @@
+{% load static %}
+<html>
+    <head>
+        <title>{% block title %}MyBlog{% endblock title %}</title>
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+
+
+		<!-- Bootstrap CSS -->
+		<!--<link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css" media="screen">-->
+
+
+		<!-- Fonts -->
+		<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500italic,500,700,700italic' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Raleway:400,500,300,600,700,800,900' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic,800,300,300italic' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="{% static 'fonts/font-awesome/css/font-awesome.min.css' %}">
+		<!-- Stroke Gap Icon -->
+		<link rel="stylesheet" href="{% static 'fonts/stroke-gap/style.css' %}">
+
+		<!-- Custom Css -->
+		<link rel="stylesheet" href="{% static 'css/custom/style.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/responsive/responsive.css' %}">
+        <style>
+           .error{color:red;}
+        </style>
+
+
+
+    </head>
+    <body>
+		 <!--<div class="page-header">
+			{% if user.is_authenticated %}
+			     <a href="{% url 'blog:post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+		    {% endif %}
+			<h1><a href="/">Django Girls Blog1</a></h1>
+		 </div>-->
+
+		 {% include "header.html" %}
+         {% block content %}
+		 {% endblock %}
+
+
+	     {% include "footer.html" %}
+    </body>
+</html>

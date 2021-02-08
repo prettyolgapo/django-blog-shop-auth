@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %}Search Results{% endblock title %}
+{% block content %}
+{% load static %}
+<!-- =================== Search container ============= -->
+		<section class="search_container faqs_sec"> <!-- faqs_sec use for style right side content -->
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 search_result">
+						<h2>Seach Results</h2>
+						<ul>
+                           {% for post in object_list %}
+                               <li>
+                                   <div class="single_search_result search_result_with_img row">
+							           <div class="col-lg-3 img_holder">
+								           <img src="{% static 'images/search/1.jpg' %}" alt="image">
+							           </div>
+							           <div class="col-lg-9 text_holder">
+										   <span>{{ post.created_date }}</span>
+										   <a href="{% url 'blog:post_detail' pk=post.pk %}"><h3>{{ post.title }}</h3></a>
+										   <p>{{ post.text }}</p>
+									   </div>
+						           </div>
+                               </li>
+                           {% endfor %}
+                        </ul>
+					</div> <!-- End right side -->
+                    {% include 'blog/side-bar.html' %}
+				</div> <!-- End row -->
+			</div> <!-- End container -->
+		</section> <!-- End search_container -->
+<!-- ============= /Search container ============== -->
+{% endblock content %}

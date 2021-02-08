@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block title %}Blog{% endblock title %}
+{% block content %}
+{% load static %}
+<!-- =============== blog container ============== -->
+		<article class="blog-container faqs_sec blog-two"> <!-- faqs_sec use for style side content -->
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 white-left right-side ptb-13">
+                        <!-- .single-blog-post -->
+                        {% for post in posts %}
+                            <div class="single-blog-post">
+							    <!-- .img-holder -->
+							    <div class="img-holder">
+								    <img src="{% static 'images/blog/1.jpg' %}" alt="">
+								    <div class="overlay"><a href=""><i class="fa fa-link"></i></a></div>
+							    </div><!-- /.img-holder -->
+							    <!-- .post-meta -->
+							    <div class="post-meta">
+								    <div class="date-holder">
+									    <span>{{ post.published_date.day }}</span> {{ post.published_date.month }}
+								    </div>
+								    <div class="title-holder">
+									    <h2 class="title">{{ post.title }}</h2>
+									    <ul>
+										    <li><a href="#">Posted By: John Smith </a></li>
+										    <li><a href="#">Comments: 2 </a></li>
+										    <li><a href="#">Categories: Taxes & Accounts</a></li>
+									    </ul>
+								    </div>
+							    </div><!-- /.post-meta -->
+							    <!-- .content -->
+							    <div class="content">
+								    <p>{{ post.text|linebreaksbr }}</p>
+
+								    <a href="{% url 'blog:post_detail' pk=post.pk %}" class="read-more">Read More <i class="fa fa-angle-right"></i></a>
+							    </div><!-- /.content -->
+						    </div>
+
+                        {% endfor %}
+					</div> <!-- End right-side -->
+
+                    {% include 'blog/side-bar.html' %}
+				</div> <!-- End row -->
+			</div>
+		</article>
+
+<!-- =============== /blog container ============== -->
+
+{% endblock content %}

@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% block title %}Cart{% endblock title %}
+{% block content %}
+{% load static %}
+<!--======= cart-page ======-->
+		<section class="cart-page">
+			<div class="container">
+      			<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<table class="table cart-table">
+							<thead>
+								<tr>
+									<th class="preview">Preview</th>
+									<th class="product">Product</th>
+									<th class="price">Price</th>
+									<th class="quantity">Quantity</th>
+									<th class="total">Total</th>
+									<th class="del-item">&nbsp;</th>
+								</tr>
+							</thead>
+							<tbody>
+                                {% for order_item in order_items %}
+
+                                    <tr>
+
+                                     		<td class="preview">
+												<img src="{% static 'images/cart/1.jpg' %}" alt="image">
+											</td>
+											<td class="product">
+												{{ order_item.product.name }}
+											</td>
+											<td class="price">
+												${{ order_item.product.price }}
+											</td>
+										<form action="{% url 'shop:cart-update' pk=order_item.pk %}" method="post">
+											{% csrf_token %}
+											<td class="quantity">
+												<input type="number" size="40" value="{{ order_item.quantity }}" name="quantity">
+											</td>
+											<td class="del-item">
+												<input type="submit" value="Edit">
+											</td>
+
+										</form>
+											<td class="total">
+												${{ order_item.price }}
+											</td>
+											<td class="del-item">
+												<a href="{% url 'shop:item-remove' pk=order_item.pk %}" class="hvr-bounce-to-right" >Del<i class="fa fa-close"></i>
+											</td>
+
+                                    </tr>
+                                {% endfor %}
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="cart-total-box row">
+					<div class="col-lg-5 col-sm-6 col-xs-12 pull-right">
+						<ul>
+							<li class="cart-total">Cart Total</li>
+							<li class="sub-total">Sub Total <span id="span-sub-total">${{ total }}</span></li>
+							<li class="total">Total <span>${{ total }}</span></li>
+							<li class="proceed-to-checkout"><a href="{% url 'shop:checkout' %}">Proceed to checkout</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+<!--======= cart-page ======-->
+{% endblock content %}

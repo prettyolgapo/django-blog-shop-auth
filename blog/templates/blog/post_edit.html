@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %}{{title}}{% endblock title %}
+{% block content %}
+<!-- =================== Post Edit container ============== -->
+		<section class="contact_us_container">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align:center;"> <!-- section title -->
+						<h2>{{title}}</h2>
+					</div> <!-- End section title -->
+					<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 form_holder"> <!-- form holder -->
+                        <form method="POST" class="post-form">{% csrf_token %}
+                            {{ form.as_p }}
+                            <button type="submit" class="save btn btn-default">Save</button>
+                        </form>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 pull-right address">
+						<address>
+							<div class="icon_holder float_left"><span class="icon icon-Pointer"></span></div>
+							<div class="address_holder float_left">13005 Greenville Avenue <br> California, TX 70240 <br>New York</div>
+						</address>
+						<address class="clear_fix">
+							<div class="icon_holder float_left"><span class="icon icon-Plaine"></span></div>
+							<div class="address_holder float_left">contact@mefinance.com <br>support@mefinance.com</div>
+						</address>
+						<address class="clear_fix">
+							<div class="icon_holder float_left"><span class="icon icon-Phone2"></span></div>
+							<div class="address_holder float_left">+ (1800) 456 7890 <br> + (1544) 456 7890</div>
+						</address>
+					</div>
+				</div>
+			</div>
+		</section>
+
+<!-- =================== /Post Edit container ============== -->
+
+
+
+
+{% endblock %}

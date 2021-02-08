@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}404{% endblock title %}
+{% block content %}
+<!-- =================== 404 container========== -->
+		<section class="error_page_container">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7 pull-right title_holder">
+						<h2><span>404:</span> Page not found</h2>
+						<p>We’re sorry but we can’t seem to find the page you requested. <br>
+						This might be because you have typed the web address incorrectly.</p>
+						<a href="{% url 'blog:home' %}">Go Home Page <i class="fa fa-arrow-circle-right"></i></a>
+					</div>
+				</div>
+			</div>
+		</section>
+<!-- =================== /404 container========== -->
+{% endblock content %}

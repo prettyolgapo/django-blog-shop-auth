@@ -1,0 +1,167 @@
+{% extends 'base.html' %}
+{% block title %}Index{% endblock title %}
+{% block content %}
+{% load static %}
+<!-- ======= Welcome section ======= -->
+		<section class="welcome_sec">
+			<div class="container">
+				<div class="row welcome_heading">
+					<div class="col-lg-4 col-md-4 col-sm-5 col-xs-12">
+						<h2>We offer <br>Different Services</h2>
+					</div>
+					<div class="col-lg-8 col-md-8 col-sm-7 col-xs-12">
+						<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Consect petur adipiscing elit.</p>
+					</div>
+				</div> <!-- End Row -->
+				<div class="row welcome welcome_details">
+					<div class="col-lg-6 col-md-12">
+						<div class="welcome_item">
+							<img src="{% static 'images/1.jpg' %}" alt="images">
+							<div class="welcome_info">
+								<h3>Investment Planning</h3>
+								<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipis civelit sed quia non numquam eius modi.</p>
+							</div>
+						</div>
+						<div class="welcome_item welcome_item_bottom">
+							<img src="{% static 'images/2.jpg' %}" alt="images">
+							<div class="welcome_info">
+								<h3>Saving & Investments</h3>
+								<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipis civelit sed quia non numquam eius modi.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-12 bottom_row">
+						<div class="welcome_item">
+							<img src="{% static 'images/3.jpg' %}" alt="images">
+							<div class="welcome_info">
+								<h3>Mutual Funds</h3>
+								<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipis civelit sed quia non numquam eius modi.</p>
+							</div>
+						</div>
+						<div class="welcome_item welcome_item_bottom">
+							<img src="{% static 'images/4.jpg' %}" alt="images">
+							<div class="welcome_info">
+								<h3>Retirements</h3>
+								<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipis civelit sed quia non numquam eius modi.</p>
+							</div>
+						</div>
+					</div>
+				</div> <!-- End Row -->
+			</div> <!-- End container -->
+		</section> <!-- End welcome_sec -->
+<!-- ======= /Welcome section ======= -->
+
+<!-- ======= Who We Are ======= -->
+		<section class="we_are">
+			<div class="left_side float_left">
+				<div class="we_are_opacity">
+					<div class="we_are_border">
+						<h2>We are E.s.t 2005</h2>
+					</div>
+				</div>
+			</div> <!-- End Left_Side -->
+			<div class="right_side float_right">
+				<div class="we_are_deatails">
+					<h2>Who We Are</h2>
+					<p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br>  <br>
+
+					Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<div class="list_item">
+						<img src="{% static 'images/icon-1.png' %}" alt=""><p>Dedicated <br>Team</p>
+						<img src="{% static 'images/icon-2.png' %}" alt=""><p>Best <br>Advisors</p>
+						<img src="{% static 'images/icon-3.png' %}" alt=""><p class="support">24/7 <br>Supports</p>
+					</div>
+				</div>
+			</div> <!-- End right_side -->
+		</section> <!-- End We Are -->
+<!-- ======= /Who We Are ======= -->
+
+<!-- ======= Testimonial & Company Values ======= -->
+		<section class="testimonial_sec clear_fix">
+			<div class="container">
+				<div class="row">
+					<div  class="col-lg-5 col-md-12 col-sm-12 col-xs-12 testimonial_container">
+						<div class="sec-title">
+							<h2>Testimonials</h2>
+						</div>
+						<div id="owl">
+							<div>
+								<div class="testimonial">
+									<img class="round_img" src="{% static 'images/7.jpg' %}" alt="images">
+									<div class="float_right client_info">
+										<p>MeFinance is Great Firm</p>
+										<span>Michale John (CEO & Founder)</span>
+										<ul>
+											<li><a href=""></a></li>
+											<li><a href=""></a></li>
+											<li><a href=""></a></li>
+											<li><a href=""></a></li>
+											<li><a href=""></a></li>
+										</ul>
+									</div>
+								</div>
+								<p class="john_speach">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipis civelit sed quia non qui dolorem ipsum quia dolor sit amet, consectetur, adipis civelit sed quia numquam eius modi. Neque porro quisquam est, qui dolorem ipsum </p>
+								<img src="{% static 'images/sign.jpg' %}" alt="images">
+							</div>
+.						</div> <!-- End owl -->
+					</div>
+					<div class="col-lg-7 col-md-12 col-sm-12 col-xs-12 company">
+						<h2>Our Company Values</h2>
+						<div class="company-tab">
+							<ul class="nav nav-pills nav-justified">
+							    <li class="active"><a data-toggle="pill" href="#menu1">Quality</a></li>
+							    <li><a data-toggle="pill" href="#menu2">Commitment</a></li>
+							    <li><a data-toggle="pill" href="#menu3">Success</a></li>
+						  	</ul>
+
+							 <div class="tab-content">
+							    <div id="menu1" class="tab-pane fade in active">
+							      <h3>Our Company Quality</h3>
+							      <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipis civelit sed quia non qui dolorem ipsum quia dolor sit amet, consectetur, adipis civelit. Red quia numquam eius modi. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur</p>
+							      <ul class="p0">
+							      	<li><i class="fa fa-arrow-circle-right"></i><a href="">Our Company Growth</a></li>
+							      	<li><i class="fa fa-arrow-circle-right"></i><a href="">1000 Employed</a></li>
+							      	<li><i class="fa fa-arrow-circle-right"></i><a href="">Customer Relationship</a></li>
+							      </ul>
+							      <ul class="list-two">
+							      	<li><i class="fa fa-arrow-circle-right"></i><a href="">Our Company Growth</a></li>
+							      	<li><i class="fa fa-arrow-circle-right"></i><a href="">1000 Employed</a></li>
+							      	<li><i class="fa fa-arrow-circle-right"></i><a href="">Customer Relationship</a></li>
+							      </ul>
+							    </div>
+							    <div id="menu2" class="tab-pane fade">
+							      <h3>Our Company Quality</h3>
+							      <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipis civelit sed quia non qui dolorem ipsum quia dolor sit amet, consectetur, adipis civelit. Red quia numquam eius modi. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur</p>
+							      <ul class="p0">
+							      	<li><i class="fa fa-arrow-circle-right"></i><a href="">Our Company Growth</a></li>
+							      	<li><i class="fa fa-arrow-circle-right"></i><a href="">1000 Employed</a></li>
+							      	<li><i class="fa fa-arrow-circle-right"></i><a href="">Customer Relationship</a></li>
+							      </ul>
+							      <ul class="list-two">
+							      	<li><i class="fa fa-arrow-circle-right"></i><a href="">Our Company Growth</a></li>
+							      	<li><i class="fa fa-arrow-circle-right"></i><a href="">1000 Employed</a></li>
+							      	<li><i class="fa fa-arrow-circle-right"></i><a href="">Customer Relationship</a></li>
+							      </ul>
+							    </div>
+							    <div id="menu3" class="tab-pane fade">
+							      <h3>Our Company Quality</h3>
+							      <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipis civelit sed quia non qui dolorem ipsum quia dolor sit amet, consectetur, adipis civelit. Red quia numquam eius modi. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur</p>
+							      <ul class="p0">
+							      	<li><i class="fa fa-arrow-circle-right"></i><a href="">Our Company Growth</a></li>
+							      	<li><i class="fa fa-arrow-circle-right"></i><a href="">1000 Employed</a></li>
+							      	<li><i class="fa fa-arrow-circle-right"></i><a href="">Customer Relationship</a></li>
+							      </ul>
+							      <ul class="list-two">
+							      	<li><i class="fa fa-arrow-circle-right"></i><a href="">Our Company Growth</a></li>
+							      	<li><i class="fa fa-arrow-circle-right"></i><a href="">1000 Employed</a></li>
+							      	<li><i class="fa fa-arrow-circle-right"></i><a href="">Customer Relationship</a></li>
+							      </ul>
+							    </div>
+							 </div>
+						</div>
+					</div>
+				</div> <!-- End row -->
+			</div> <!-- End Container -->
+		</section> <!-- testimonial -->
+<!-- ======= /Testimonial & Company Values ======= -->
+{% endblock content %}
