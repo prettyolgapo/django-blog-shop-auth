@@ -38,15 +38,14 @@ Installation
 	Setting up a database server
 		1.Open pgAdmin4
 		2.Click server, and choose PostgreSQL version
-		3.Then create our database. It's name 
-	        	mysitedb
-            	4.Change user and password to your own in file settings.py 
-            	5.In PyCharm terminal install module for PostgreSQL database and migrate tables
+		3.Then create our database. It's name is mysitedb
+	       	4.Change user and password to your own in file settings.py 
+		5.In PyCharm terminal install module for PostgreSQL database and migrate tables
 	        	pip install psycopg2
 	        	py manage.py makemigrations <app_label> (<app_label> are shop, blog)
-	        	py manage.py migrate	
-            	6.Add some data in tables using Django Admin
-	    	7.Create a new superuser
+	        	py manage.py migrate
+		6.Add some data in tables using Django Admin
+		7.Create a new superuser
 			py manage.py createsuperuser
                 
         Run project 
