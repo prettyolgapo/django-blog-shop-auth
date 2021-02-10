@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}About Us{% endblock title %}
+{% block content %}
+{% load static %}
+<!-- ==================shop ================ -->
+		<section class="shop_container faqs_sec"> <!-- faqs_sec use for style left side content -->
+			<div class="container">
+				<div class="row">
+					<!-- .shop-page-content -->
+					<div class="col-lg-8 col-md-8 pull-right shop-page-content">
+						<div class="section-title-style-2">
+							<h2>Featured Products</h2>
+						</div>
+						<div class="row">
+							<p>No Products</p>
+						</div>
+
+					</div> <!-- /.shop-page-content -->
+                    {% include 'shop/side-bar.html' %}
+				</div>  <!-- End row -->
+			</div> <!-- End Container -->
+		</section>
+
+<!-- ==================shop ================ -->
+{% endblock content %}
