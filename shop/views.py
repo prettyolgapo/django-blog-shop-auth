@@ -13,8 +13,11 @@ from django.contrib.auth.decorators import login_required
 
 
 def shop_list(request):
+    # try:
     products = Product.objects.all()
     return render(request, "shop/list.html", {'products': products})
+    # except Product.DoesNotExist:
+    #     return render(request, "shop/empty-list.html")
 
 
 def product_details(request, pk):
